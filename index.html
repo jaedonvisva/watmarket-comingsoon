@@ -6,7 +6,7 @@
   <title>WatMarket</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="icon" href="watmarket_dark_logo.png" type="image/png">
   <style>
     :root {
@@ -79,9 +79,37 @@
     }
 
     @media (max-width: 900px) {
+      .container {
+        padding: 40px 24px 80px;
+        align-items: center;
+        height: auto;
+        min-height: 100vh;
+      }
+
       .stack {
         grid-template-columns: 1fr;
         gap: 48px;
+        padding-top: 20px;
+      }
+
+      .left {
+        align-items: center;
+        text-align: center;
+      }
+
+      .header-row {
+        justify-content: center;
+      }
+
+      footer {
+        position: relative;
+        bottom: auto;
+        padding: 24px 0;
+        margin-top: auto;
+      }
+
+      .laptop {
+        min-height: 280px;
       }
     }
 
@@ -92,11 +120,17 @@
       animation: fadeUp 1.1s ease forwards;
     }
 
+    .header-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+
     .logo {
       width: 40px;
       height: 40px;
       opacity: 0.9;
-      margin-bottom: 12px;
     }
 
     .badge {
@@ -133,10 +167,12 @@
     }
 
     .tagline {
-      font-size: 18px;
+      font-size: 24px;
       color: var(--muted);
       max-width: 520px;
       margin-top: 12px;
+      font-family: 'Playfair Display', serif; /* Fancier font */
+      font-style: italic;
     }
 
     .cta {
@@ -304,7 +340,7 @@
     }
 
     footer {
-      position: fixed;
+      position: relative;
       bottom: 20px;
       width: 100%;
       text-align: center;
@@ -386,14 +422,15 @@
   <div class="container">
     <div class="stack">
       <div class="left">
-        <img src="watmarket_dark_logo.png" alt="WatMarket Logo" class="logo" />
+        <div class="header-row">
+          <img src="watmarket_dark_logo.png" alt="WatMarket Logo" class="logo" />
+          <span class="badge"><span class="pulse-circle"></span>Coming Soon</span>
+        </div>
         <h1>
-          Bet on <span>Waterloo</span>.
+          Wat<span>Market</span>
         </h1>
-        <span class="badge"><span class="pulse-circle"></span>Coming Soon</span>
         <p class="tagline">
-          A campus-first prediction market<br />
-          for classes, clubs, elections, and student chaos.
+          Bet on Waterloo.
         </p>
       </div>
 
@@ -424,7 +461,7 @@
   </div>
 
   <footer>
-    Not affiliated with the University of Waterloo · For entertainment only
+    WatMarket · Not affiliated with the University of Waterloo · For entertainment only
   </footer>
 
   <script>
